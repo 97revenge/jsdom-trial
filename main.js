@@ -1,6 +1,6 @@
 import "./style.css";
 
-export default function App() {
+function App() {
   document.querySelector("#app").innerHTML = `
   <div>
 
