@@ -1,15 +1,5 @@
 import "./style.css";
 
-function App() {
-  document.querySelector("#app").innerHTML = `
-  <div>
-
-  </div>
-`;
-}
-
-App();
-
 class webComponent extends HTMLElement {
   constructor() {
     super();
@@ -34,10 +24,12 @@ class webComponent extends HTMLElement {
     this.two = two;
     this.tree = tree;
 
-    this.app();
+    const app = this.app();
   }
 
-  app() {
+  form() {
+    const form = document.querySelector(".form-forms");
+
     const paragraphLink = document.createElement("a");
     paragraphLink.href = "https://github.com/97revenge";
     paragraphLink.textContent = this.allText.createFree;
@@ -69,14 +61,14 @@ class webComponent extends HTMLElement {
     const check = document.createElement("div");
     check.classList.add("check");
 
-    const containerInput = document.createElement("div");
-    containerInput.classList.add("input-content");
+    const formInput = document.createElement("div");
+    formInput.classList.add("input-content");
 
     const groupOne = document.createElement("div");
     groupOne.classList.add("group-one"); // group-388
 
-    const inputContainer = document.createElement("div");
-    inputContainer.classList.add("input-container");
+    const inputform = document.createElement("div");
+    inputform.classList.add("input-form");
 
     const styleFrameName = document.createElement("div");
     styleFrameName.classList.add("frame-2");
@@ -93,8 +85,8 @@ class webComponent extends HTMLElement {
     const styleFrameEmail = document.createElement("div");
     styleFrameEmail.classList.add("frame-2");
 
-    const inputEmailContainer = document.createElement("div");
-    inputEmailContainer.classList.add("input-container");
+    const inputEmailform = document.createElement("div");
+    inputEmailform.classList.add("input-form");
 
     const inputEmailLabel = document.createElement("label");
     inputEmailLabel.classList.add("input-label");
@@ -108,8 +100,8 @@ class webComponent extends HTMLElement {
     const styleFramePassword = document.createElement("div");
     styleFramePassword.classList.add("frame-2");
 
-    const inputPasswordContainer = document.createElement("div");
-    inputPasswordContainer.classList.add("input-container");
+    const inputPasswordform = document.createElement("div");
+    inputPasswordform.classList.add("input-form");
 
     const inputPasswordLabel = document.createElement("label");
     inputPasswordLabel.classList.add("input-label");
@@ -149,7 +141,7 @@ class webComponent extends HTMLElement {
     title.classList.add("title-form");
 
     const forms = document.createElement("div");
-    forms.classList.add("container-forms");
+    forms.classList.add("form-forms");
 
     forms.appendChild(title);
     forms.appendChild(description);
@@ -158,30 +150,33 @@ class webComponent extends HTMLElement {
     btnPrimary.appendChild(frameOne);
     google.appendChild(btnPrimary);
     forms.appendChild(google);
-    forms.appendChild(containerInput);
-    containerInput.appendChild(groupOne);
-    groupOne.appendChild(inputContainer);
+    forms.appendChild(formInput);
+    formInput.appendChild(groupOne);
+    groupOne.appendChild(inputform);
 
-    inputContainer.appendChild(inputNameLabel);
+    inputform.appendChild(inputNameLabel);
     inputNameLabel.appendChild(styleFrameName);
     styleFrameName.appendChild(inputNameText);
 
-    groupOne.appendChild(inputEmailContainer);
-    inputContainer.appendChild(inputEmailLabel);
+    groupOne.appendChild(inputEmailform);
+    inputform.appendChild(inputEmailLabel);
     inputEmailLabel.appendChild(styleFrameEmail);
     styleFrameEmail.appendChild(inputEmailText);
-    groupOne.appendChild(inputPasswordContainer);
-    inputContainer.appendChild(inputPasswordLabel);
+    groupOne.appendChild(inputPasswordform);
+    inputform.appendChild(inputPasswordLabel);
     inputPasswordLabel.appendChild(styleFramePassword);
     styleFramePassword.appendChild(inputPasswordText);
-    inputContainer.appendChild(check);
+    inputform.appendChild(check);
     check.appendChild(shape);
     check.appendChild(paragraphShape);
-    inputContainer.appendChild(buttonPrimary);
+    inputform.appendChild(buttonPrimary);
     buttonPrimary.appendChild(buttonCreate);
     buttonCreate.appendChild(paragraphCreate);
-    inputContainer.appendChild(paragraphAccount);
+    inputform.appendChild(paragraphAccount);
     paragraphAccount.appendChild(paragraphLink);
+  }
+
+  app() {
     // o que importa na renderizacao é isso aqui ....
 
     const img = document.createElement("img");
@@ -193,15 +188,17 @@ class webComponent extends HTMLElement {
     img.classList.add("image-animate");
 
     const div = document.createElement("div");
-    div.classList.add("container");
+    div.classList.add("form");
     div.classList.add("bg-pan-right");
+
+    const form = this.form();
 
     div.innerHTML = `
     <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 
-      .container {
+      .form {
         display:flex;
         flex-direction:row;
         justify-content:flex-start;
@@ -255,7 +252,7 @@ class webComponent extends HTMLElement {
 }
 
 
-      .container-forms {
+      .form-forms {
         
         flex-direction:column;
         justify-content:center;
@@ -353,7 +350,7 @@ class webComponent extends HTMLElement {
         box-sizing: border-box;
       }
 
-      .input-container{
+      .input-form{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -498,6 +495,8 @@ class webComponent extends HTMLElement {
 
     </style>
     `;
+
+    this.forms();
 
     div.appendChild(img);
     div.appendChild(forms);
