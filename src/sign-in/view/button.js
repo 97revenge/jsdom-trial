@@ -4,10 +4,10 @@ export default function button() {
     "style",
     `
     position: relative;
-    width: 444px;
+    width: 333px;
     height: 60px;
     box-sizing: border-box;
-    margin-left: 40px;
+    margin-left: 75px;
     margin-top: 35px;
     background-color: transparent;
     border: 0px transparent;
@@ -64,8 +64,8 @@ export default function button() {
     font-family: Poppins, sans-serif;
     font-weight: 600;
     text-align: right;
-    letter-spacing: -0.2px;
-  
+    letter-spacing: -0.1px;
+    padding-left:15px;
   `
   );
 
@@ -79,7 +79,7 @@ export default function button() {
     `
   position: absolute;
   top: 19px;
-  left: 106.7px;
+  left: 55.7px;
   width: 23px;
   height: 23px;
   

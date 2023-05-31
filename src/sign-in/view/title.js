@@ -10,7 +10,7 @@ export default function title() {
     font-weight: 600;
     font-size: 52px;
     line-height: 62px;
-    letter-spacing: -2px;
+    letter-spacing: 3px;
     margin-left: 0px;
     color: #94a3b8;`
   );
