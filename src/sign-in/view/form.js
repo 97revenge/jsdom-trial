@@ -1,3 +1,4 @@
+// import formController from "../controller/formController";
 import remember from "./remember-me";
 
 export default function form() {
@@ -111,6 +112,10 @@ export default function form() {
   };
 
   const { nameInput, emailInput, passwordInput } = appendInput;
+  nameInput.setAttribute("id", "name");
+  emailInput.setAttribute("id", "email");
+  passwordInput.setAttribute("id", "password");
+
   nameInput.setAttribute("type", "text");
   nameInput.setAttribute("placeholder", "your name and last name");
   emailInput.setAttribute("type", "text");
