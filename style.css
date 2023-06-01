@@ -1,293 +1,40 @@
-/* .component {
-  display: flex;
-  flex-direction: row;
-} */
-
-* {
-  margin: 0px;
-  gap: 100px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: rgba(15, 23, 42, 0.7);
-  height: 970px;
-  width: 1440px;
-  margin-left: 200px;
-  box-shadow: 15px;
-  border-radius: 20px;
-}
-.image-login {
-  display: block;
-  width: 570px;
-  height: 787px;
-  margin-top: 100px;
-}
-
-.image-animate:hover {
-  -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
-  animation: pulsate-fwd 0.5s ease-in-out infinite both;
-}
-
-@-webkit-keyframes image-animate:hover {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+@media (max-height: 1903px) and (max-width: 2469.06px) {
+  * {
+    margin: 0px;
+    gap: 100px;
   }
-  50% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+
+  svg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+    background-color: #0e4166;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(15, 35, 59, 0.1),
+      #1c4db7
+    );
   }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(15, 23, 42, 0.7);
+    height: 970px;
+    width: 1440px;
+    margin-left: 200px;
+    box-shadow: 15px;
+    border-radius: 20px;
+    bottom: 43px;
   }
-}
-@keyframes pulsate-fwd {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  .image-login {
+    display: block;
+    width: 570px;
+    height: 787px;
+    margin-top: 100px;
   }
-  50% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-.container-forms {
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 120px;
-  margin-top: 50px;
-}
-.title-form {
-  width: fit-content;
-  height: 62px;
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 52px;
-  line-height: 62px;
-  letter-spacing: -2px;
-  margin-left: 0px;
-  color: #94a3b8;
-}
-.description-form {
-  width: 449px;
-  height: 60px;
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: #94a3b8;
-}
-.button {
-  position: relative;
-  width: 444px;
-  height: 60px;
-  box-sizing: border-box;
-  margin-left: 40px;
-  margin-top: 35px;
-}
-
-.button-primary {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  border-radius: 35px;
-  box-sizing: border-box;
-  background-color: rgba(30, 41, 59, 1);
-}
-
-.frame-1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 9px;
-  width: fit-content;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.button-name {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: rgba(255, 255, 255, 1);
-  font-size: 16px;
-  line-height: 175%;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  text-align: right;
-  letter-spacing: -0.2px;
-}
-
-.google-icon {
-  position: absolute;
-  top: 19px;
-  left: 106.7px;
-  width: 23px;
-  height: 23px;
-}
-
-.input-content {
-  width: 449px;
-  height: 497px;
-  box-sizing: border-box;
-}
-
-.group-one {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  width: 100%;
-  border-radius: 35px;
-  box-sizing: border-box;
-  margin-top: 45px;
-}
-.input-label {
-  color: rgba(228, 228, 231, 1);
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 500;
-  font-family: Poppins, sans-serif;
-}
-
-.frame-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 13px;
-  width: 100%;
-  height: 60px;
-  padding: 15px 20px;
-  border: 1px solid rgba(51, 65, 85, 1);
-  border-radius: 35px;
-  box-sizing: border-box;
-}
-
-.input-style {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  width: 449px;
-  height: 30px;
-  border-radius: 35px;
-  box-sizing: border-box;
-  font-family: Poppins, sans-serif;
-  border: none;
-  padding-left: 15px;
-  background-color: transparent;
-  color: white;
-}
-
-.check {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 5px;
-
-  width: 500px;
-  box-sizing: border-box;
-}
-
-.shape {
-  width: 19px;
-  height: 19px;
-  border: 1px solid rgba(51, 65, 85, 1);
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.remember-me {
-  color: rgba(255, 255, 255, 1);
-  font-size: 14px;
-  line-height: 157%;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  margin-top: 20px;
-  margin: 0px;
-}
-
-.button-primary-create {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 201px;
-  height: 55px;
-  padding: 16px;
-  border-radius: 50px;
-  box-sizing: border-box;
-  background-color: rgba(37, 99, 235, 1);
-  margin-top: 20px;
-  margin-left: 150px;
-}
-
-.button-create {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 9px;
-  width: fit-content;
-  box-sizing: border-box;
-  background-color: transparent;
-  border: 0;
-}
-
-.button-create {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: rgba(255, 255, 255, 1);
-  font-size: 16px;
-  line-height: 175%;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: -0.2px;
-}
-
-.don-thave-an-account-cre {
-  display: flex;
-  flex-direction: row;
-  color: rgba(100, 116, 139, 1);
-  font-size: 14px;
-  line-height: 157%;
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
-  margin-left: 70px;
-}
-
-input::placeholder {
-  color: white;
 }

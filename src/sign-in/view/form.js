@@ -112,6 +112,7 @@ export default function form() {
   };
 
   const { nameInput, emailInput, passwordInput } = appendInput;
+
   nameInput.setAttribute("id", "name");
   emailInput.setAttribute("id", "email");
   passwordInput.setAttribute("id", "password");
@@ -193,7 +194,7 @@ export default function form() {
   
   `
   );
-  button.type = "submit";
+  button.setAttribute("type", "submit");
   button.innerHTML = `Create Account`;
 
   check.appendChild(shape);
@@ -217,6 +218,34 @@ export default function form() {
   groupOne.appendChild(button);
 
   groupOne.appendChild(remember());
+
+  // groupOne.addEventListener("submit", (event) => {
+  //   event.preventDefault();
+
+  //   const userName = nameInput.nodeValue;
+  //   const userEmail = emailInput.nodeValue;
+  //   const userPassword = password.nodeValue;
+
+  //   // const breakPassword = async (userPassword) => {
+  //   //   const hash = await userPassword;
+  //   //   hash.entries();
+
+  //   //   hash.map((item) => item.shift(item));
+
+  //   //   return hash;
+  //   // };
+
+  //   const user = {
+  //     userName,
+  //     userEmail,
+  //     // password: breakPassword(userPassword),
+  //     userPassword,
+  //   };
+
+  //   alert(user);
+
+  //   return user;
+  // });
 
   return groupOne;
 }

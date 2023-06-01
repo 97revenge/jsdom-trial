@@ -1,3 +1,4 @@
+import formController from "./sign-in/controller/formController";
 import button from "./sign-in/view/button";
 import description from "./sign-in/view/description";
 import form from "./sign-in/view/form";
@@ -9,8 +10,6 @@ class Form extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: "open" });
 
-    this.formController();
-
     const view = {
       web: root(),
       title: shadow.appendChild(title()),
@@ -19,15 +18,9 @@ class Form extends HTMLElement {
       form: shadow.appendChild(form()),
     };
 
-    const { input } = view;
-    console.log(input);
-  }
-
-  formController() {
-    const input = document.querySelectorAll("div");
-
-    console.log(input);
-    return input;
+    const controller = {
+      form: formController(),
+    };
   }
 }
 
