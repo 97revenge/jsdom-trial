@@ -219,33 +219,5 @@ export default function form() {
 
   groupOne.appendChild(remember());
 
-  // groupOne.addEventListener("submit", (event) => {
-  //   event.preventDefault();
-
-  //   const userName = nameInput.nodeValue;
-  //   const userEmail = emailInput.nodeValue;
-  //   const userPassword = password.nodeValue;
-
-  //   // const breakPassword = async (userPassword) => {
-  //   //   const hash = await userPassword;
-  //   //   hash.entries();
-
-  //   //   hash.map((item) => item.shift(item));
-
-  //   //   return hash;
-  //   // };
-
-  //   const user = {
-  //     userName,
-  //     userEmail,
-  //     // password: breakPassword(userPassword),
-  //     userPassword,
-  //   };
-
-  //   alert(user);
-
-  //   return user;
-  // });
-
   return groupOne;
 }

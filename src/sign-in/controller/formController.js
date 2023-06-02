@@ -1,6 +1,4 @@
 export default function formController() {
-  // const form = document.querySelector("web-form").shadowRoot.querySelector("")
-
   const form = document
     .querySelector("web-form")
     .shadowRoot.querySelector("form");
