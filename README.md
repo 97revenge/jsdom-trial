@@ -43,6 +43,6 @@ você tera o resultado :
 d112154 fix(reparo nos links do markdown):#1 TDD - fazendo um pequeno teste
 ``` 
 
-
+#### ❗ Projeto nao responsivo , para melhor experiência deixe sua altura em `1903px` e sua largura para `2469px` 
 
 
