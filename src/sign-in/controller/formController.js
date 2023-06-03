@@ -32,8 +32,9 @@ export default function formController() {
       o seu email é : ${JSON.stringify(user.email)},
       a sua senha é : ${JSON.stringify(
         Object.entries(user.password)
-          .map((item) => item + 1)
-          .concat(" ↢ o item a esquerda é uma hash bem simples")
+          .map((item) => String(item).slice(3))
+          .join("*****")
+          .slice(-4)
       )} 
     
     
